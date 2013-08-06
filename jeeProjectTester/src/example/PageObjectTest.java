@@ -1,3 +1,4 @@
+package example;
 
 import java.util.concurrent.TimeUnit;
 
@@ -6,8 +7,6 @@ import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import example.HomePage;
-import example.SearchResultPage;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
@@ -22,7 +21,7 @@ public class PageObjectTest  {
         long start = System.currentTimeMillis();
         elapsed(start);
 
-        HomePage homePage = new HomePage(driver);
+        HomePage1 homePage = new HomePage1(driver);
 
         elapsed(start);
 

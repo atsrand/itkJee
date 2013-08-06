@@ -1,4 +1,4 @@
-package ex7;
+package example;
 
 import java.util.concurrent.TimeUnit;
 
