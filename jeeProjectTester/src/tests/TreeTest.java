@@ -1,24 +1,37 @@
 package tests;
 
-import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
+import junitparams.*;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 
-import pages.FormPage;
-import pages.HomePage;
-import pages.Pages;
+import pages.*;
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
 
 @RunWith(JUnitParamsRunner.class)
 public class TreeTest  {
 
     @Test
-    @Parameters({"1,", "2,1"})
-    public void addTree(String code, String superiorCode) {
+    public void treePage() {
 
+        TreePage treePage = new HomePage().menu().clickTree();
+
+        String expected = "1\n" +
+                          "   2";
+
+        assertThat(treePage.getContents(), is(expected));
+    }
+
+    @Before
+    public void setUp() {
+        Pages.truncateTables();
+
+        addUnit("1", "");
+        addUnit("2", "1");
+    }
+
+    private void addUnit(String code, String superiorCode) {
         FormPage formPage = new HomePage().menu().clickAdd();
 
         formPage.setName(code);
@@ -26,12 +39,6 @@ public class TreeTest  {
         formPage.setSuperiorCode(superiorCode);
 
         formPage.save();
-
-    }
-
-    @Before
-    public void setUp() {
-        Pages.truncateTables();
     }
 
     @After

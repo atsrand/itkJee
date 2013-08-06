@@ -7,4 +7,9 @@ public class Menu extends Pages {
         return new FormPage();
     }
 
+    public TreePage clickTree() {
+        element("menuTree").click();
+        return new TreePage();
+    }
+
 }
