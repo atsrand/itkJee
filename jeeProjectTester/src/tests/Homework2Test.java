@@ -10,9 +10,9 @@ import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Homework1Test  {
+public class Homework2Test  {
 
-    public static final String BASE_URL = "http://localhost:8080/jeeLectures/";
+    public static final String BASE_URL = "http://ci.itcollege.ee/tomcat/hw1/";
     private static Pattern SESSION_ID_PATTERN = Pattern.compile("id is (\\w+)");
     private static Pattern SESSION_COUNT_PATTERN = Pattern.compile("count: (\\d+)");
     private static Pattern SESSION_ATTRIBUTE_PATTERN = Pattern.compile("attribute is (\\d+)");
