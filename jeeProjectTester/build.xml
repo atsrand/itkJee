@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE project>
-<project basedir="." name="jeeProject"
+<project basedir="." name="jeeProject" default="retrieve"
     xmlns:ivy="antlib:org.apache.ivy.ant">
 
     <property name="dir.lib" value="WebContent/WEB-INF/lib" />
@@ -8,7 +8,7 @@
         value="WebContent/WEB-INF/lib/[artifact]-[type]-[revision].[ext]" />
 
     <path id="classpath">
-        <fileset dir="lib" />
+        <fileset dir="../lib" />
     </path>
 
     <target name="retrieve" description="retreive dependencies">

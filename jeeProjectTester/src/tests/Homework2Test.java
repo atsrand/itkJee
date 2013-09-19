@@ -8,7 +8,7 @@ import java.util.regex.*;
 
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class Homework2Test  {
 
@@ -140,7 +140,7 @@ public class Homework2Test  {
     }
 
     private WebDriver getDriver() {
-        FirefoxDriver driver = new FirefoxDriver();
+        WebDriver driver = new HtmlUnitDriver();
         openDriversDrivers.add(driver);
         return driver;
     }

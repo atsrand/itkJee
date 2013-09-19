@@ -5,9 +5,10 @@ import static org.junit.Assert.fail;
 
 public class ExampleTest {
 
+    String userName = System.getProperty("userName");
+
     @Test
     public void test1() {
-        String userName = System.getProperty("userName");
         fail("a failure for " + userName);
     }
 

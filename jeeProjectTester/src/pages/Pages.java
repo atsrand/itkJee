@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class Pages {
 
@@ -11,7 +11,7 @@ public class Pages {
 
     protected static WebDriver getDriver() {
         if (driver == null) {
-            driver = new FirefoxDriver();
+            driver = new HtmlUnitDriver();
         }
         return driver;
     }
