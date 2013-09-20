@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE project>
-<project basedir="." name="jeeProject"
+<project basedir="." name="jeeProject" default="retrieve"
     xmlns:ivy="antlib:org.apache.ivy.ant">
 
     <property name="dir.lib" value="WebContent/WEB-INF/lib" />
