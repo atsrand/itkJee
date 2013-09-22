@@ -14,15 +14,11 @@ public class Pooling {
 
     public static void main(String[] args) {
         // First we set up the BasicDataSource.
-        // Normally this would be handled auto-magically by
+        // Normally this would be handled automatically by
         // an external configuration, but in this example we'll
         // do it manually.
-        //
         DataSource dataSource = setupDataSource("jdbc:hsqldb:mem:orders");
 
-        //
-        // Now, we can use JDBC DataSource as we normally would.
-        //
         Connection conn = null;
         Statement stmt = null;
         ResultSet rset = null;
