@@ -15,7 +15,7 @@ public class Homework2Test  {
     public static final String BASE_URL = "https://ci.itcollege.ee/part2example/";
     private static Pattern SESSION_ID_PATTERN = Pattern.compile("id is (\\w+)");
     private static Pattern SESSION_COUNT_PATTERN = Pattern.compile("count: (\\d+)");
-    private static Pattern SESSION_ATTRIBUTE_PATTERN = Pattern.compile("attribute is (\\d+)");
+    private static Pattern SESSION_ATTRIBUTE_PATTERN = Pattern.compile("attribute is (\\w+)");
 
     private static String HOME_PAGE = "HomePage";
     private static String SESSION_COUNT_PAGE = "SessionCount";
@@ -35,6 +35,7 @@ public class Homework2Test  {
         String idA = getSessionId(getPageSource(HOME_PAGE, driver));
         String idB = getSessionId(getPageSource(HOME_PAGE, driver));
 
+        assertThat(idA, is(notNullValue()));
         assertThat(idA, is(equalTo(idB)));
     }
 
@@ -96,7 +97,7 @@ public class Homework2Test  {
 
         String sessionAttribute = getSessionAttribute(getPageSource(HOME_PAGE, driver));
 
-        assertThat(sessionAttribute, is(nullValue()));
+        assertThat(sessionAttribute, is("null"));
     }
 
     @After
@@ -135,7 +136,8 @@ public class Homework2Test  {
         if (m.find()) {
             return m.group(1);
         } else {
-            return null;
+            throw new IllegalStateException("pattern not found");
+            // return null;
         }
     }
 
