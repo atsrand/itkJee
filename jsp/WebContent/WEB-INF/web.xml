@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>jsp</display-name>
+  <servlet>
+    <description></description>
+    <display-name>Form</display-name>
+    <servlet-name>Form</servlet-name>
+    <servlet-class>servlet.Form</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Form</servlet-name>
+    <url-pattern>/Form</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Tables</display-name>
+    <servlet-name>Tables</servlet-name>
+    <servlet-class>servlet.Tables</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Tables</servlet-name>
+    <url-pattern>/Tables</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Summary</display-name>
+    <servlet-name>Summary</servlet-name>
+    <servlet-class>servlet.Summary</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Summary</servlet-name>
+    <url-pattern>/Summary</url-pattern>
+  </servlet-mapping>
+</web-app>
