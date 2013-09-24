@@ -12,7 +12,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class Homework2Test  {
 
-    public static final String BASE_URL = "https://ci.itcollege.ee/part2example/";
+    public static final String BASE_URL = "http://ci.itcollege.ee/part2example/";
     private static Pattern SESSION_ID_PATTERN = Pattern.compile("id is (\\w+)");
     private static Pattern SESSION_COUNT_PATTERN = Pattern.compile("count: (\\d+)");
     private static Pattern SESSION_ATTRIBUTE_PATTERN = Pattern.compile("attribute is (\\w+)");
