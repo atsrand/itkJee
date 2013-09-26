@@ -137,7 +137,6 @@ public class Homework2Test  {
             return m.group(1);
         } else {
             throw new IllegalStateException("pattern not found");
-            // return null;
         }
     }
 

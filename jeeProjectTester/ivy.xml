@@ -8,7 +8,9 @@
     <dependency org="org.seleniumhq.selenium" name="selenium-support" rev="2.35.0"/>
 
     <dependency org="junit" name="junit" rev="4.11"/>
+    <dependency org="org.hamcrest" name="hamcrest-all" rev="1.3"/>
     <dependency org="pl.pragmatists" name="JUnitParams" rev="1.0.2"/>
+
 
 
   </dependencies>

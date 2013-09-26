@@ -45,8 +45,6 @@ public class Form extends HttpServlet {
             return;
         }
 
-        // ...
-
         Person person = new Person();
         person.setName(request.getParameter("name"));
         person.setFirstName(request.getParameter("firstName"));

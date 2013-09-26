@@ -12,7 +12,6 @@ public class HomePage extends Pages {
 
     public void selectAdd() {
         // TODO Auto-generated method stub
-
     }
 
     public Menu menu() {
